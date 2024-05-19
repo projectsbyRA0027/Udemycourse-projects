@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background:aliceblue;
+    text-align: center;
+    padding: 1rem;
+}
+
+.basic{
+    background:linear-gradient(to right,#187fd4 0%,#b276e7 50%,#8f60e6 100%);
+    text-align: center;
+    padding: 1rem; 
+}
+
+.name{
+    color: red;
+    background-color: blue;
+}
+
+.aboutme{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.skils{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+
+.contactme{
+    text-align: center;
+    color:black;
+    background-color: aliceblue;
+}
+
+.footer{
+    background-color: aliceblue;
+}
