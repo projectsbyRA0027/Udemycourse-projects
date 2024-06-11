@@ -1,0 +1,267 @@
+/* Universal selectors */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+body{
+    line-height: 1;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+
+nav ul{
+    list-style: none;
+}
+
+blockquote,q{
+    quotes: none;
+}
+
+blockquote::before,blockquote::after,q::before,q::after{
+    content: " ";
+    content: none;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    color: hsla(0,0%,80%,1);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: hsla(0,0%,90%,1);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 70px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    font-weight: 700;
+    color: hsla(0,0%,80%,1);
+    transition: backgrond-color 1.3s,min-height 1.3s,padding 1.3s;
+}
+
+header:hover{
+    color: hsla(0,100%,40%,1);
+    transition: color 0.3s;
+}
+
+#logo{
+    border: white solid;
+}
+
+header img{
+    width: 10vw;
+    height: auto;
+    -webkit-transition: width 1.3s;
+    transition: width 1.3s;
+}
+
+body .scrolled header{
+    background-color: hsla(0,0%,80%,1);
+    color: hsla(0,0%,80%,1);
+    min-height: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+body .scrolled header img{
+    width: 4vw;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li{
+    padding-left: 20px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#home{
+    height: 90vh;
+    background: linear-gradient(to left rgb(0,65,90),rgb(65,80,80)) fixed no-repeat;
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+    grid-template-rows: repeat(6,1fr);
+}
+
+#hero{
+    grid-area: 5/1/6/2;
+    color: #fff;
+    padding-left: 30px;
+}
+
+#hero h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 8vw;
+    text-align-last: left;
+    text-shadow: 5px 5px #000;
+}
+
+#about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background-color:hsla(0,0%,10%,1);
+}
+
+.about_inner{
+    display: flex;
+    min-height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: 16px;
+    line-height: 1.2rem;
+    color: hsla(0,0%,80%,1);
+}
+
+.about_inner p{
+    margin-right: 20px;
+    max-width: 500px;
+}
+
+#subscribe{
+    height: 100vh;
+    background: url("pexels-chevanon-302899.jpg")fixed center/cover no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-rows: repeat(4,1fr);
+    justify-items: center;
+}
+
+#email_div{
+    grid-area: 2/2/4/3;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: hsla(0,0%,80%,1);
+    background-color: hsla(0,0%,10%,6);
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+}
+
+#email{
+    margin: 20px 0;
+    height: 35px;
+    width: 75%;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+#email .valid{
+    border: green solid 2px;
+}
+
+#email .invalid{
+    border: red solid 2px;
+}
+
+#submit{
+    border-radius: 3px;
+    padding: 10px;
+    background-color: hsla(0,100%,60%,1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: hsla(0,0%,80%,1);
+}
+
+#submit:hover{
+    background-color: hsla(0,100%,80%,1);
+    cursor: progress;
+}
+
+/* Footer */
+#footer{
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-areas: "contact map hours" ". copy .";
+    padding-top: 15px;
+    background-color: hsla(0,0%,12%,1);
+    color: hsla(0,0%,70%,1);
+}
+
+#footer section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#footer p{
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+#footer p:last-child{
+    margin-bottom: 0px;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+#map{
+    grid-area: map;
+    border-left: 1px solid #000;
+    border-right: #000 solid 1px;
+}
+
+#gmap_canvas{
+    margin: auto;
+    overflow: hidden;
+    height: 85%;
+    border: 1px hsla(0,0%,70%,1)solid;
+}
+
+#hours ul{
+    list-style-type: none;
+    line-height: 30px;
+}
+
+#copy{
+    grid-area: copy;
+    text-align: center;
+    font-size: 1vw;
+}
