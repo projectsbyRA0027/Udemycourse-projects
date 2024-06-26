@@ -1,0 +1,9 @@
+<%- include('layout')  %>
+
+<h2>ALL Posts</h2>
+<a href="/new">Create New</a>
+<ul>
+    <% posts.forEach((post,index)=>{ %>   <!--js execute tag-->
+        <li><a href="/post/<%= index %>"><%= post.title %></a></li>
+        <% }) %>
+</ul>
