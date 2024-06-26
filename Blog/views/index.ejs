@@ -1,9 +1,12 @@
 <%- include('layout')  %>
-
-<h2>ALL Posts</h2>
-<a href="/new">Create New</a>
-<ul>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h2 class="animate__animated
+animate__fadeInDown" data-aos="fade-down">ALL Posts</h2>
+<a href="/new">Create New Post</a>
+</div>
+<ul class="list-group">
     <% posts.forEach((post,index)=>{ %>   <!--js execute tag-->
-        <li><a href="/post/<%= index %>"><%= post.title %></a></li>
+        <li data-aos="fade-up" class="list-group-item animate__animated
+        animate__fadeInUp" ><a href="/post/<%= index %>" class="text-dark"><%= post.title %></a></li>
         <% }) %>
 </ul>
